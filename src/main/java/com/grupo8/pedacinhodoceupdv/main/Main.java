@@ -56,22 +56,26 @@ public class Main extends JFrame {
                     dispose(); // Fecha a tela de login
                     showMenuView(); // Exibe o MenuView
 
-                    FontManager fontManager = new FontManager();
-                    Font futuraPT16 = fontManager.carregarFont("/fontes/FuturaPT.otf", Font.PLAIN, 16);
-                    Font futuraPT14 = fontManager.carregarFont("/fontes/FuturaPT.otf", Font.PLAIN, 14);
-                    Font futuraPT14Bold = fontManager.carregarFont("/fontes/FuturaPT.otf", Font.BOLD, 14);
-                    Font futuraPT13 = fontManager.carregarFont("/fontes/FuturaPT.otf", Font.PLAIN, 13);
-                    UIManager.put("dateChooserCombo", futuraPT13);
-                    UIManager.put("Button.font", futuraPT16);
-                    UIManager.put("RadioButton.font", LoginViewturaPT13);
-                    UIManager.put("Label.font", futuraPT14);
-                    UIManager.put("Panel.font", futuraPT16);
-                    UIManager.put("Table.font", futuraPT13);
-                    UIManager.put("TableHeader.font", futuraPT14Bold);
-                    UIManager.put("TextField.font", futuraPT13);
-                    UIManager.put("FormattedTextField.font", futuraPT13);
-                    UIManager.put("TextArea.font", futuraPT13);
-                    new MenuView().setVisible(true);
+                    // FontManager fontManager = new FontManager();
+                    // Font futuraPT16 = fontManager.carregarFont("/fontes/FuturaPT.otf",
+                    // Font.PLAIN, 16);
+                    // Font futuraPT14 = fontManager.carregarFont("/fontes/FuturaPT.otf",
+                    // Font.PLAIN, 14);
+                    // Font futuraPT14Bold = fontManager.carregarFont("/fontes/FuturaPT.otf",
+                    // Font.BOLD, 14);
+                    // Font futuraPT13 = fontManager.carregarFont("/fontes/FuturaPT.otf",
+                    // Font.PLAIN, 13);
+                    // UIManager.put("dateChooserCombo", futuraPT13);
+                    // UIManager.put("Button.font", futuraPT16);
+                    // UIManager.put("RadioButton.font", LoginViewturaPT13);
+                    // UIManager.put("Label.font", futuraPT14);
+                    // UIManager.put("Panel.font", futuraPT16);
+                    // UIManager.put("Table.font", futuraPT13);
+                    // UIManager.put("TableHeader.font", futuraPT14Bold);
+                    // UIManager.put("TextField.font", futuraPT13);
+                    // UIManager.put("FormattedTextField.font", futuraPT13);
+                    // UIManager.put("TextArea.font", futuraPT13);
+                    // new MenuView().setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(Main.this, "Credenciais inválidas", "Erro de Login",
                             JOptionPane.ERROR_MESSAGE);
