@@ -100,21 +100,13 @@
 
 ## Descrição
 
-- Bem-vindo à documentação do projeto da biblioteca. Este projeto consiste em uma aplicação backend que gerencia os empréstimos e devoluções de livros em uma biblioteca.
-
-- Este projeto tem como objetivo criar um sistema de gerenciamento de biblioteca que permita o cadastro e gerenciamento de livros, usuários e empréstimos. O sistema será desenvolvido em Java e usará uma interface gráfica para interação com o usuário.
-
 - Este documento tem como objetivo fornecer informações detalhadas sobre o projeto, incluindo os objetivos, tecnologias utilizadas, arquitetura de software, além de instruções para a instalação e utilização da aplicação.
 
 <img src="https://media2.giphy.com/media/YOvOkaS5ZKfimDIgwJ/giphy.gif?cid=ecf05e472ipczxdp8km6z40b4fb7q2vin64hh9xqswqyq0gb&rid=giphy.gif&ct=g" />
 
 ### Objetivos
 
-> **Note**: O objetivo principal deste projeto é criar uma aplicação backend que possa gerenciar empréstimos e devoluções de livros em uma biblioteca. Dentre os objetivos específicos, destacam-se:
-
-1. Permitir o cadastro de livros e usuários;
-2. Permitir o empréstimo e devolução de livros;
-3. Gerar relatórios com estatísticas de empréstimos e devoluções.
+> **Note**: O objetivo principal deste projeto é criar uma aplicação backend que possa gerenciar um Restaurante.
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
 [Volte ao inicio da Documentação 🔝](#topo)
