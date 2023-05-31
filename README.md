@@ -270,14 +270,6 @@ Para verificar se o Java foi instalado corretamente, abra o terminal e execute o
 
 ## Requisitos Funcionais
 
-1. O sistema deve permitir o cadastro de livros, incluindo informações como título, autor, editora, ano de publicação, número de páginas e ISBN.
-2. O sistema deve permitir o cadastro de usuários, incluindo informações como nome, endereço, telefone e e-mail.
-3. O sistema deve permitir o registro de empréstimos de livros, incluindo informações como o livro emprestado, o usuário que fez o empréstimo e a data de empréstimo.
-4. O sistema deve permitir a devolução de livros emprestados e atualizar o status do livro para disponível.
-5. O sistema deve permitir a consulta de livros por título, autor, ISBN ou palavra-chave.
-6. O sistema deve permitir a consulta de usuários por nome, endereço ou telefone.
-7. O sistema deve permitir a visualização de empréstimos atuais e histórico de empréstimos de um usuário específico.
-
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
 [Volte ao inicio da Documentação 🔝](#topo)
 
@@ -291,11 +283,6 @@ A camada de apresentação será responsável pela interface gráfica do usuári
 [Volte ao inicio da Documentação 🔝](#topo)
 
 ## Funcionalidades do Sistema
-
-Cadastro de Livros: Permite ao usuário cadastrar informações sobre um livro, incluindo título, autor, editora, ano de publicação, número de páginas e ISBN.
-Cadastro de Usuários: Permite ao usuário cadastrar informações sobre um usuário, incluindo nome, endereço, telefone e e-mail.
-Registro de Empréstimo: Permite ao usuário registrar o empréstimo de um livro para um usuário específico, incluindo a data de empréstimo.
-Devolução de Livros: Permite ao usuário registrar a devolução de um livro emprestado.
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
 [Volte ao inicio da Documentação 🔝](#topo)
@@ -323,50 +310,8 @@ Antes de iniciar a instalação do sistema, é necessário ter as seguintes ferr
    > Abra o terminal e navegue até a pasta onde deseja clonar o projeto. Em seguida, execute o seguinte comando:
 
 ```bash
-git clone https://github.com/seu-usuario/biblioteca.git
+git clone https://github.com/
 ```
-
-Substitua "seu-usuario" pelo nome de usuário da sua conta no GitHub.
-
-3. Configurando o servidor
-
-   > Copie o arquivo "biblioteca.war" que se encontra na pasta "target" do projeto e cole na pasta "webapps" do servidor.
-
-4. Iniciando o servidor
-   > Abra o terminal e navegue até a pasta "bin" do servidor. Em seguida, execute o seguinte comando:
-
-```bash
-./startup.sh
-```
-
-5. Testando o projeto
-
-   > Abra o navegador e digite o endereço "http://localhost:8080/biblioteca". A página inicial da aplicação deve ser exibida.
-
-6. Testando as rotas no Insomnia
-   > Abra o Insomnia e crie um novo workspace para o projeto. Em seguida, crie as requisições para testar as rotas da aplicação, seguindo a documentação da API.
-
-Exemplo de requisição para cadastrar um novo livro:
-
-- Método: POST
-- URL: http://localhost:8080/biblioteca/api/livros
-- Headers:
-  - Content-Type: application/json
-- Body:
-
-```json
-{
-  "titulo": "O Senhor dos Anéis",
-  "autor": "J.R.R. Tolkien",
-  "anoPublicacao": 1954
-}
-```
-
-Ao enviar a requisição, o livro será cadastrado na base de dados e será retornado um objeto JSON com os dados do livro, incluindo o ID gerado automaticamente pelo sistema.
-
-7. Encerrando o servidor
-
-> Abra o terminal e navegue até a pasta "bin" do servidor. Em seguida, execute o seguinte comando:
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
 [Volte ao inicio da Documentação 🔝](#topo)
@@ -452,12 +397,6 @@ String minhaVariavel = System.getenv("MINHA_VARIAVEL");
 
 ### Exemplo de arquivo .env
 
-```bash
-BIBLIOTECA_DB_URL=jdbc:mysql://localhost:3306/biblioteca
-BIBLIOTECA_DB_USERNAME=root
-BIBLIOTECA_DB_PASSWORD=123456
-```
-
 ### Valores Permitidos
 
 Os valores permitidos para a variável `APP_ENV` são:
@@ -492,48 +431,7 @@ Antes de iniciar o sistema, é necessário configurar o banco de dados. Siga os 
 1. Abra o MySQL Server e crie um novo banco de dados com o seguinte comando:
 
 ```sql
-CREATE DATABASE biblioteca;
-```
-
-2. Em seguida, crie a tabela "livros" com o seguinte comando:
-
-```sql
-CREATE TABLE livros (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  titulo VARCHAR(100) NOT NULL,
-  autor VARCHAR(100) NOT NULL,
-  editora VARCHAR(100) NOT NULL,
-  ano_publicacao YEAR NOT NULL,
-  num_paginas INT NOT NULL,
-  isbn VARCHAR(20) NOT NULL,
-  status VARCHAR(20) NOT NULL
-);
-```
-
-3. Crie a tabela "usuarios" com o seguinte comando:
-
-```sql
-CREATE TABLE usuarios (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR(100) NOT NULL,
-  endereco VARCHAR(200) NOT NULL,
-  telefone VARCHAR(20) NOT NULL,
-  email VARCHAR(100) NOT NULL
-);
-```
-
-4. Crie a tabela "emprestimos" com o seguinte comando:
-
-```sql
-CREATE TABLE emprestimos (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  livro_id INT NOT NULL,
-  usuario_id INT NOT NULL,
-  data_emprestimo DATE NOT NULL,
-  data_devolucao DATE,
-  FOREIGN KEY (livro_id) REFERENCES livros(id),
-  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-);
+CREATE DATABASE DBPEDACINHODOCEU;
 ```
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
@@ -544,7 +442,7 @@ CREATE TABLE emprestimos (
 1. Clone o repositório do projeto para a sua máquina local usando o comando abaixo:
 
 ```bash
-git clone https://github.com/seunome/sistemabiblioteca.git
+git clone https://github.com/
 ```
 
 2. Abra o IDE Java de sua preferência e importe o projeto clonado.
@@ -601,99 +499,6 @@ O arquivo README.md contém a documentação do projeto e o arquivo LICENSE cont
 ## Adicionando a funcionalidade RESTful
 
 A funcionalidade RESTful será adicionada ao projeto Biblioteca por meio da criação de um endpoint REST que permitirá que outras aplicações possam acessar informações sobre livros, usuários e empréstimos. O endpoint será implementado por meio de uma camada de serviço que encapsulará a lógica de negócio do sistema e exibirá essa funcionalidade por meio de uma interface REST.
-
-Para isso, siga as etapas abaixo:
-
-### 1. Adicione a biblioteca Spring
-
-Abra o arquivo pom.xml do projeto e adicione a seguinte dependência ao arquivo:
-
-```java
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-```
-
-Essa dependência adicionará o Spring ao projeto Biblioteca e permitirá a criação de endpoints RESTful.
-
-### 2. Implemente a camada de serviço
-
-Crie uma classe BibliotecaService que encapsule a lógica de negócio do sistema. Essa classe deve incluir métodos para buscar livros, usuários e empréstimos do banco de dados.
-
-```java
-@Service
-public class BibliotecaService {
-
-    @Autowired
-    private LivroDAO livroDAO;
-
-    @Autowired
-    private UsuarioDAO usuarioDAO;
-
-    @Autowired
-    private EmprestimoDAO emprestimoDAO;
-
-    public List<Livro> buscarLivros() throws DAOException {
-        return livroDAO.buscarTodos();
-    }
-
-    public List<Usuario> buscarUsuarios() throws DAOException {
-        return usuarioDAO.buscarTodos();
-    }
-
-    public List<Emprestimo> buscarEmprestimos() throws DAOException {
-        return emprestimoDAO.buscarTodos();
-    }
-}
-```
-
-Observe que a classe BibliotecaService faz uso de classes DAO para buscar informações no banco de dados.
-
-### 3. Crie os endpoints RESTful
-
-Crie uma classe BibliotecaController que irá receber as requisições HTTP e chamará os métodos da camada de serviço para buscar as informações necessárias. Essa classe deve ser anotada com @RestController para indicar que ela é um controlador RESTful.
-
-```java
-@RestController
-public class BibliotecaController {
-
-    @Autowired
-    private BibliotecaService bibliotecaService;
-
-    @GetMapping("/livros")
-    public List<Livro> buscarLivros() throws DAOException {
-        return bibliotecaService.buscarLivros();
-    }
-
-    @GetMapping("/usuarios")
-    public List<Usuario> buscarUsuarios() throws DAOException {
-        return bibliotecaService.buscarUsuarios();
-    }
-
-    @GetMapping("/emprestimos")
-    public List<Emprestimo> buscarEmprestimos() throws DAOException {
-        return bibliotecaService.buscarEmprestimos();
-    }
-}
-```
-
-Essa classe cria três endpoints RESTful, um para buscar livros, outro para buscar usuários e outro para buscar empréstimos. Cada endpoint é anotado com @GetMapping e o caminho da URL correspondente.
-
-### 4. Teste os endpoints
-
-Agora que os endpoints RESTful foram criados, é possível testá-los para verificar se a funcionalidade está funcionando corretamente. Para testar, basta iniciar o servidor e fazer uma requisição HTTP para os endpoints criados:
-
-- Para buscar todos os livros: `GET http://localhost:8080/livros`
-- Para buscar todos os usuários: `GET http://localhost:8080/usuarios`
-- Para buscar todos os empréstimos: `GET http://localhost:8080/emprestimos`
-
-Essas requisições devem retornar uma lista de objetos JSON com as informações solicitadas.
-
-Com a adição da funcionalidade RESTful ao projeto Biblioteca, outras aplicações poderão se integrar ao sistema e acessar informações sobre livros, usuários e empréstimos. Essa funcionalidade foi implementada utilizando o framework Spring, que é amplamente utilizado para o desenvolvimento de aplicações web em Java. A documentação apresentada forneceu uma visão geral do processo de adição da funcionalidade RESTful e pode ser usada como referência para outras aplicações que desejam implementar uma interface REST.
-
-![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
-[Volte ao inicio da Documentação 🔝](#topo)
 
 ## Deploy da Biblioteca
 
@@ -919,12 +724,6 @@ Agradecemos às seguintes pessoas por suas contribuições para este projeto:
 
 <a href="">
   <img src="https://contrib.rocks/image?repo=estevam5s/rest-api-nasa" />
-</a>
-<a href="">
-  <img src="https://contrib.rocks/image?repo=Lorenzorangelt/Lorenzorangelt" />
-</a>
-<a href="">
-  <img src="https://contrib.rocks/image?repo=Guisv26/Teste-Estagio-Neoway" />
 </a>
 
 ![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
