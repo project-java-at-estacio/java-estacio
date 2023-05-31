@@ -281,7 +281,7 @@ A camada de apresentação será responsável pela interface gráfica do usuári
 
 ## Instruções de Instalação e Configuração
 
-Para executar o sistema de gerenciamento de biblioteca, siga as instruções abaixo:
+Para executar o sistema de gerenciamento do Restaurante, siga as instruções abaixo:
 
 ### Pré-requisitos
 
