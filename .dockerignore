@@ -1,0 +1,10 @@
+# Arquivos e diretórios a serem ignorados pelo Docker durante o processo de build
+
+# Ignorar arquivos de compilação
+*.class
+*.jar
+
+# Ignorar arquivos e diretórios específicos
+target/
+node_modules/
+.git/
