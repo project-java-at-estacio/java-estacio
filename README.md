@@ -16,7 +16,7 @@
 
 <br>
 
-# Sistema de Gerenciamento de Biblioteca
+# Sistema de Gerenciamento de um Restaurante
 
 <!-- Adicionando ícones de linguagem de programação -->
 
